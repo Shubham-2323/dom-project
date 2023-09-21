@@ -8,3 +8,23 @@ const guess = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
 const lowOrHigh = document.querySelector('#lowOrHigh');
 const paras = document.querySelector('#resultParas');
+
+const p = document.createElement('p');
+
+const prev = [];
+let numGuess = 1;
+
+let playGame = true;
+
+if (playGame) {
+  submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+  });
+}
+
+function validateGuess(guess) {}
+
+function checkGuess(guess) {}
+
+function displayMessage(guess) {}
