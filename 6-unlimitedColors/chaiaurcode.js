@@ -8,6 +8,13 @@ const randomColor = function () {
 };
 
 console.log(randomColor());
+
+const startChanging = function () {};
+const stopChanging = function () {};
+
+document.getElementById('start').addEventListener('click', startChanging);
+
+document.getElementById('stop').addEventListener('click', stopChanging);
 // const start = function start() {
 //   document.getElementById('start').addEventListener('click', function (e) {
 //     console.log('Start');
