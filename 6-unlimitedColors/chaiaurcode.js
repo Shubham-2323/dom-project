@@ -7,21 +7,23 @@ const randomColor = function () {
   return color;
 };
 
+let intervalId;
 console.log(randomColor());
+const startChanging = function () {
+  if (!intervalId) {
+    intervalId = setInterval(colorr, 1000);
+  }
 
-const startChanging = function () {};
-const stopChanging = function () {};
+  function colorr() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChanging = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
 
 document.getElementById('start').addEventListener('click', startChanging);
 
 document.getElementById('stop').addEventListener('click', stopChanging);
-// const start = function start() {
-//   document.getElementById('start').addEventListener('click', function (e) {
-//     console.log('Start');
-//   });
-// }
-// const stop = document
-//   .getElementById('stop')
-//   .addEventListener('click', function (e) {
-//     console.log('Stop');
-//   });
